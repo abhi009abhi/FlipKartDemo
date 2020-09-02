@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
   features= {"FeaturesFile"},
   glue= {"com.qa.stepdefinition"},
   dryRun= false,
-  monochrome=true
+  monochrome=true,
+  plugin= {"json:target/cucumber-reports/Cucumber.json"}
 )
 public class Runner {
 
