@@ -16,7 +16,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 
-public class FlipkartCartSDF {
+public class FlipkartCartSDF extends TestBase{
 	
 	TestBase tb =new  TestBase();
 	FlipkartUtility flipUtil;
@@ -56,6 +56,7 @@ public class FlipkartCartSDF {
 	    	result=true;
 	    }
 	    Assert.assertEquals(true, result);
+	    driver.quit();
 	}
 
 }

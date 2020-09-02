@@ -3,10 +3,13 @@ package com.qa.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.testBase.TestBase;
 
@@ -57,9 +60,11 @@ public class FlipkartHomePage extends TestBase{
 	List<String> categories,categoriesSubOption;
 	WebElement moveToCategory,moveToSubCategory;
 	
+	WebDriverWait wait;
 	public FlipkartHomePage()
 	{
 		PageFactory.initElements(driver, this);
+	    wait = new WebDriverWait(driver,30);
 	}
 	
 	public String checkNameHomePage(String s) {
@@ -71,6 +76,7 @@ public class FlipkartHomePage extends TestBase{
 	//Return a List having text of all web elements
 	public List<String> getTextofWebElements(List<WebElement> we)
 	{
+		
 		List<String> weString =new ArrayList<String>();
 		for(int i=0;i<we.size();i++)
 		{
@@ -86,18 +92,50 @@ public class FlipkartHomePage extends TestBase{
 		{	
            return weList.get(list.indexOf(usrCat));
 		}
-	return electronics;
+	return null;
 	
 	}
 	
-	public void userMainAndSubMenuOptions(String usrCat,String usrSubCat)
+	public void clickMainMenuAndSubOption(String usrCat,String usrSubCat)
 	{
+		if(checkMainAndSubMenuOptions(usrCat, usrSubCat))
+		{	
+		 moveToCategory=getMenuOptionToClick(topMenuFlipKart,categories,usrCat);
+		 moveToCategory.click();
+		 moveToSubCategory=getSubMenu(moveToCategory.getText(), usrSubCat);
+		 moveToSubCategory.click();
+		}
+	}
+	
+	public boolean checkMainAndSubMenuOptions(String usrCat,String usrSubCat)
+	{
+		boolean bothMenuFound=true;
+		boolean mainMenuFound=true;
+				
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='_1QZ6fC _3Lgyp8']"))); 
 	    categories=getTextofWebElements(topMenuFlipKart);
 		moveToCategory=getMenuOptionToClick(topMenuFlipKart,categories,usrCat);
-		moveToCategory.click();
-		moveToSubCategory=getSubMenu(moveToCategory.getText(), usrSubCat);
-		moveToSubCategory.click();
-	}
+		
+				
+		if(moveToCategory==null)
+		{
+		   	mainMenuFound=false;
+		   	
+		}
+		else
+		{
+		  moveToSubCategory=getSubMenu(moveToCategory.getText(), usrSubCat);
+		  
+		}	
+		
+		if(mainMenuFound==false||moveToSubCategory==null)
+		{
+			bothMenuFound=false;
+			
+		}	
+		
+		System.out.println(bothMenuFound);
+	return bothMenuFound;}
 	
 	public WebElement getSubMenu(String mainMenuSelectedAs,String usrSubCat)
 	{

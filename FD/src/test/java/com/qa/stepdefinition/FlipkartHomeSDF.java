@@ -28,14 +28,18 @@ public class FlipkartHomeSDF extends TestBase{
 	@When("User clicks on {string} and {string}")
 	public void user_clicks_on_and(String string, String string2) {
 		
-		fhp.userMainAndSubMenuOptions(string, string2);
-	    
+		
+		//fhp.clickMainMenuAndSubOption("Electronics","shoes");
+		fhp.clickMainMenuAndSubOption("Electronics","oyo");
+		fhp.clickMainMenuAndSubOption("ooyo","MI");
+		fhp.clickMainMenuAndSubOption("Electronics","Mi");
+		
 	}
 
 	@Then("user is taken to Product Page")
 	public void user_is_taken_to_Product_Page() throws InterruptedException {
 	  
-	  
+	  //driver.quit();
 	}
 
 }

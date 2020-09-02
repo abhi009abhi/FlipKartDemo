@@ -51,6 +51,8 @@ public class FlipkartProductSDF extends TestBase{
 	@Then("product is added to cart")
 	public void product_is_added_to_cart() {
 	    
+		
+		driver.quit();
 	}
 	
 	

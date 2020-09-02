@@ -1,0 +1,4 @@
+# Created at 2020-09-02T09:56:14.274
+Boot Manifest-JAR contains absolute paths in classpath 'F:\Testing\PHOTON2\FD\FD\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

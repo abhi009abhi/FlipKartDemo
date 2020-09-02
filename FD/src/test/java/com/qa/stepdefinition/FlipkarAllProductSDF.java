@@ -72,6 +72,6 @@ public void user_is_taken_to_product_Page() {
 	}
 	
     Assert.assertEquals(true, flag);
-    driver.close();
+    driver.quit();
 }
 }

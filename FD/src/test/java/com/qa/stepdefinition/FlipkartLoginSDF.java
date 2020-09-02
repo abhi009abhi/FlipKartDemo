@@ -53,12 +53,12 @@ public class FlipkartLoginSDF extends TestBase {
 		if(checkAssert==1)
 		{	
 		 Assert.assertEquals(excpetedUserName,fhp.checkNameHomePage(excpetedUserName));
-		 driver.close();
+		 driver.quit();
 		}
 		else
 		{	
 		 Assert.assertEquals(actualMsg,msg);
-		 driver.close();
+		 driver.quit();
 		}
 		
 	}
