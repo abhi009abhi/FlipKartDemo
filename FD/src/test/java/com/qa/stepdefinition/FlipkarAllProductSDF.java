@@ -33,7 +33,7 @@ public void user_selects_and_and_as(String string, String string2, String string
     fhp = new FlipkartHomePage();
     flp.enterLoginDetails("7507218335","FlipKart007");
     flp.goToFlipkartHome();
-    fhp.userMainAndSubMenuOptions(string, string2);
+    fhp.clickMainMenuAndSubOption(string,string2);
     usrProd=string3;
     
 }

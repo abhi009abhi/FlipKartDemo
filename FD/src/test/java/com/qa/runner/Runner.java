@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
   glue= {"com.qa.stepdefinition"},
   dryRun= false,
   monochrome=true,
-  plugin= {"json:target/cucumber-reports/Cucumber.json"}
+  plugin= {"json:target/json-cucumber-reports/Cucumber.json",
+		   "html:target/html-cucumber-reports/Cucumber.html"}
 )
 public class Runner {
 

@@ -5,8 +5,8 @@ When  clicks on Add to Cart
 Then  product is added to cart
 Examples: 
 |category|subCategory|product|
-|Electronics|Mi|Redmi K20|
-
+|Electronics|Vivo|Y20|
+|TVs & Appliances|Fully Automatic Front Load|IFB|
 
 
 

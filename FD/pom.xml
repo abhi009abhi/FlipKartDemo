@@ -141,8 +141,8 @@
          <plugin>
          <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
            <groupId>net.masterthought</groupId>
-           <artifactId>cucumber-reporting</artifactId>
-           <version>3.15.0</version>
+           <artifactId>maven-cucumber-reporting</artifactId>
+           <version>5.0.0</version>
            <executions>
            <execution>
             <id>execution</id>
@@ -151,15 +151,15 @@
             <goal>generate</goal>
             </goals>
             <configuration>
-            <projectName>BDD01</projectName>
+            <projectName>FD</projectName>
             <outputDirectory>target/cucumber-JVM-reports</outputDirectory>
-            <cucumberOutput>target/cucumber-reports/Cucumber.json</cucumberOutput>
+            <cucumberOutput>target/json-cucumber-reports/Cucumber.json</cucumberOutput>
             <skippedFails>true</skippedFails>
             <enableFlashCharts>true</enableFlashCharts>
             <buildNumber>42</buildNumber>
             <parallelTesting>false</parallelTesting>
             <skip>false</skip>
-             <inputDirectory>target/cucumber-reports/</inputDirectory>
+             <inputDirectory>target/json-cucumber-reports/cucumber-reports/</inputDirectory>
              <jsonFiles>
              <param>**/*.json</param>
              </jsonFiles>
@@ -176,7 +176,7 @@
           <includes>
           <exclude>**/*Runner.java</exclude>
           </includes>
-          
+          <testFailureIgnore>true</testFailureIgnore>
           </configuration>
         </plugin>
       </plugins>

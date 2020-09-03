@@ -64,7 +64,7 @@ public class FlipkartHomePage extends TestBase{
 	public FlipkartHomePage()
 	{
 		PageFactory.initElements(driver, this);
-	    wait = new WebDriverWait(driver,30);
+	   
 	}
 	
 	public String checkNameHomePage(String s) {
@@ -88,6 +88,7 @@ public class FlipkartHomePage extends TestBase{
 			
 	public WebElement getMenuOptionToClick(List<WebElement> weList, List<String> list,String usrCat)
 	{
+		
 		if(list.contains(usrCat))
 		{	
            return weList.get(list.indexOf(usrCat));
@@ -96,61 +97,69 @@ public class FlipkartHomePage extends TestBase{
 	
 	}
 	
-	public void clickMainMenuAndSubOption(String usrCat,String usrSubCat)
+	public boolean clickMainMenuAndSubOption(String usrCat,String usrSubCat)
 	{
-		if(checkMainAndSubMenuOptions(usrCat, usrSubCat))
-		{	
-		 moveToCategory=getMenuOptionToClick(topMenuFlipKart,categories,usrCat);
-		 moveToCategory.click();
-		 moveToSubCategory=getSubMenu(moveToCategory.getText(), usrSubCat);
-		 moveToSubCategory.click();
+		boolean performClick=false;	
+		if(checkMainMenuOptions(usrCat))
+		{
+			moveToCategory.click();
+			
+		}	
+		else
+		{
+			return performClick;
 		}
-	}
+		
+		if(getSubMenu(moveToCategory.getText(),usrSubCat)!=null)
+		{
+			
+			moveToSubCategory.click();
+			performClick=true;
+		}
+		
+	return performClick;}
 	
-	public boolean checkMainAndSubMenuOptions(String usrCat,String usrSubCat)
+	public boolean checkMainMenuOptions(String usrCat)
 	{
-		boolean bothMenuFound=true;
 		boolean mainMenuFound=true;
-				
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='_1QZ6fC _3Lgyp8']"))); 
+		 wait = new WebDriverWait(driver,1000);
+		wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.xpath("//span[@class='_1QZ6fC _3Lgyp8']"), 8));
 	    categories=getTextofWebElements(topMenuFlipKart);
 		moveToCategory=getMenuOptionToClick(topMenuFlipKart,categories,usrCat);
-		
+		System.out.println("Main Category Found As: "+moveToCategory);
 				
 		if(moveToCategory==null)
 		{
 		   	mainMenuFound=false;
 		   	
 		}
-		else
-		{
-		  moveToSubCategory=getSubMenu(moveToCategory.getText(), usrSubCat);
-		  
-		}	
+		System.out.println("Returning MainMenuFOund as "+mainMenuFound);
 		
-		if(mainMenuFound==false||moveToSubCategory==null)
-		{
-			bothMenuFound=false;
-			
-		}	
-		
-		System.out.println(bothMenuFound);
-	return bothMenuFound;}
+  return mainMenuFound;}
 	
 	public WebElement getSubMenu(String mainMenuSelectedAs,String usrSubCat)
 	{
 		WebElement we= null;
+		System.out.println(mainMenuSelectedAs);
 		switch (mainMenuSelectedAs) {
 		case "Electronics":
+			wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.xpath("//span[text()='Electronics']//following-sibling::ul//li/a"),100));
 			categoriesSubOption=getTextofWebElements(subMenuElectronics);
 			moveToSubCategory=getMenuOptionToClick(subMenuElectronics,categoriesSubOption,usrSubCat);
 			return moveToSubCategory;
 		case "TVs & Appliances":
+			wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.xpath("//span[text()='TVs & Appliances']//following-sibling::ul//li/a"),100));
 			categoriesSubOption=getTextofWebElements(subMenuTvAndAppliances);
 			moveToSubCategory=getMenuOptionToClick(subMenuTvAndAppliances,categoriesSubOption,usrSubCat);
 			return moveToSubCategory;
 		default:
+			System.out.println("returninf grom default");
 			return we;
 		}
 	}
+	
+	
+	
+	
+	
 }

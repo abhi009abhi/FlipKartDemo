@@ -6,4 +6,5 @@ Then user is taken to Product Page
 Examples:
 |category|subCategory|
 |Electronics|Mi|
-#|Men|Sports Shoes| 
+|TVs & Appliances|Fully Automatic Front Load|
+

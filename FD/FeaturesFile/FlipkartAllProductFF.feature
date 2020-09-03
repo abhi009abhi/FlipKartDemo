@@ -5,8 +5,8 @@ When  click on user Product
 Then  user is taken to product Page
 Examples: 
 |category|subCategory|product|
-#|Electronics|Mi|Redmi 8|
-|TVs & Appliances|Inverter AC|Godrej|
+|Electronics|Vivo|Y20|
+#|TVs & Appliances|Fully Automatic Front Load|IFB|
 
 
 

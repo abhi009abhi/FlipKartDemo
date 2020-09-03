@@ -5,9 +5,9 @@ When  User click on login Button
 Then  User is taken to FlipKart Home.
 Examples: 
 |userId|passWord|errMsg|userName|
-|onlytoShopping@gmail.com|FlipKart007||Abhishek|
+#|onlytoShopping@gmail.com|FlipKart007||Abhishek|
 |7507218335|FlipKart007||Abhishek|
-|onlytoShopping@gmail|FlipKart007|Please enter valid Email ID/Mobile number||
+#|onlytoShopping@gmail|FlipKart007|Please enter valid Email ID/Mobile number||
 |7507218335|FlipKart006|Your username or password is incorrect||
 
 
