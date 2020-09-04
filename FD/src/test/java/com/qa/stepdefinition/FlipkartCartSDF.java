@@ -39,9 +39,10 @@ public class FlipkartCartSDF extends TestBase{
 	    cart = new FlipkartCartPage();
 	    flp.enterLoginDetails("7507218335","FlipKart007");
 	    flp.goToFlipkartHome();
-	    fhp.clickMainMenuAndSubOption(string,string2);
+	    Assert.assertTrue(fhp.goToMenuAndSubMenu(string,string2));
 	    String handle=flipUtil.getPageHandle();
-	    fall.checkProduct(string3);
+	    Assert.assertTrue(fall.checkProduct(string3));
+	    fall.goToFlipkartProduct();
 	    Set<String> allHandles = flipUtil.getAllHandle();
 	    flipUtil.changeWindow(handle,allHandles);
 	    flProd.clickOnAddToCart();

@@ -6,7 +6,7 @@ Then  user is taken to product Page
 Examples: 
 |category|subCategory|product|
 |Electronics|Vivo|Y20|
-#|TVs & Appliances|Fully Automatic Front Load|IFB|
+|TVs & Appliances|Fully Automatic Front Load|IFB|
 
 
 

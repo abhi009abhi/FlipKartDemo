@@ -36,21 +36,24 @@ public class FlipkartAllProductPage extends TestBase {
 		
 	return list;}
 	
-	public void checkProduct(String usrProd)
+	public boolean checkProduct(String usrProd)
 	{
-	   
+	   boolean productFound=false;
 	   allProdDisplayed = getElements();
        for(int i=0;i<allProdDisplayed.size();i++)
        {
     	  if(allProdDisplayed.get(i).contains(usrProd.toLowerCase()))
     	   {
     		   index=i;
-    		   goToFlipkartProduct();
+    		   productFound=true;
     		   break;
     		
     	   } 
        }
        System.out.println("exit check product");
+       
+       return productFound;
+       
     }
 	
 	 public FlipkartProductPage goToFlipkartProduct()

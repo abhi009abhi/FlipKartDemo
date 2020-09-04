@@ -26,14 +26,14 @@ public class FlipkarAllProductSDF extends TestBase{
 	String usrProd,runTimeProdSelected;
 	
 @Given("User selects  {string} and {string} and {string} as")
-public void user_selects_and_and_as(String string, String string2, String string3) {
+public void user_selects_and_and_as(String string, String string2, String string3) throws InterruptedException {
 	tb.initDriver();
     flp = new FlipkartLoginPage();
     util = new FlipkartUtility();
     fhp = new FlipkartHomePage();
     flp.enterLoginDetails("7507218335","FlipKart007");
     flp.goToFlipkartHome();
-    fhp.clickMainMenuAndSubOption(string,string2);
+    Assert.assertTrue(fhp.goToMenuAndSubMenu(string,string2));
     usrProd=string3;
     
 }
@@ -42,12 +42,12 @@ public void user_selects_and_and_as(String string, String string2, String string
 public void click_on_user_Product() {
     fall = new FlipkartAllProductPage();
     String handle = util.getPageHandle();
-    fall.checkProduct(usrProd);
+    Assert.assertTrue(fall.checkProduct(usrProd));
+    fall.goToFlipkartProduct();
     fpp=new FlipkartProductPage();
     Set<String> allHandle= util.getAllHandle();
     util.changeWindow(handle, allHandle);
     runTimeProdSelected = fpp.getProductName();
-    //System.out.println(runTimeProdSelected);
     
     
 }

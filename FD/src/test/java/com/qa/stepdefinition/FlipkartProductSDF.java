@@ -2,6 +2,8 @@ package com.qa.stepdefinition;
 
 import java.util.Set;
 
+import org.junit.Assert;
+
 import com.qa.pages.FlipkartAllProductPage;
 import com.qa.pages.FlipkartCartPage;
 import com.qa.pages.FlipkartHomePage;
@@ -34,9 +36,10 @@ public class FlipkartProductSDF extends TestBase{
 	    cart = new FlipkartCartPage();
 	    flp.enterLoginDetails("7507218335","FlipKart007");
 	    flp.goToFlipkartHome();
-	    fhp.clickMainMenuAndSubOption(string,string2);
+	    Assert.assertTrue(fhp.goToMenuAndSubMenu(string,string2));
 	    String handle=flipUtil.getPageHandle();
-	    fall.checkProduct(string3);
+	    Assert.assertTrue(fall.checkProduct(string3));
+	    fall.goToFlipkartProduct();
 	    Set<String> allHandles = flipUtil.getAllHandle();
 	    flipUtil.changeWindow(handle,allHandles);
 	}

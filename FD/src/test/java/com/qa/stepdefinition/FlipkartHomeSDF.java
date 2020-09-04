@@ -16,7 +16,7 @@ public class FlipkartHomeSDF extends TestBase{
 	TestBase tb =new  TestBase();
 	FlipkartLoginPage flp; 
 	FlipkartHomePage  fhp; 
-    int checkAssert;
+   
 	
 	@Given("User has login successfully")
 	public void user_has_login_successfully() {
@@ -30,26 +30,19 @@ public class FlipkartHomeSDF extends TestBase{
 
 	@When("User clicks on {string} and {string}")
 	public void user_clicks_on_and(String string, String string2) {
-				System.out.println(checkAssert);
 				
-		if(fhp.clickMainMenuAndSubOption(string,string2))
-		{
-			checkAssert=1;
-		}	
-		else
-		{	
-		 Assert.assertTrue(false);
-		}
+	     System.out.println("Main Menu : "+string);
+	     System.out.println("subMenu : "+string2);
+	
+		Assert.assertTrue(fhp.goToMenuAndSubMenu(string,string2));
+			
+		
 	}
 
 	@Then("user is taken to Product Page")
 	public void user_is_taken_to_Product_Page() throws InterruptedException {
-	  if(checkAssert==1)
-	  {
-		  Assert.assertTrue(true);
-		  driver.close();
-	  }	 
 	  
+	         driver.quit();
 	 
 	}
 

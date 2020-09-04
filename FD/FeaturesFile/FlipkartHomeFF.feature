@@ -5,6 +5,6 @@ When User clicks on "<category>" and "<subCategory>"
 Then user is taken to Product Page
 Examples:
 |category|subCategory|
-|Electronics|Mi|
+|Electronics|Vivo|
 |TVs & Appliances|Fully Automatic Front Load|
 
