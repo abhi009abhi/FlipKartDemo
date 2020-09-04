@@ -5,8 +5,9 @@ When  clicks on Add to Cart
 Then  product is added to cart
 Examples: 
 |category|subCategory|product|
-|Electronics|Vivo|Y20|
+|Electronics|Vivo|Y12|
 |TVs & Appliances|Fully Automatic Front Load|IFB|
+
 
 
 

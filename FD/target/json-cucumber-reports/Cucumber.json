@@ -6,11 +6,11 @@
         "line": 8,
         "name": "User is on Home Page",
         "description": "",
-        "id": "select-product;user-is-on-home-page;;2",
+        "id": "all-products;user-is-on-home-page;;2",
         "after": [
           {
             "result": {
-              "duration": 639800,
+              "duration": 1398900,
               "status": "passed"
             },
             "match": {
@@ -23,11 +23,11 @@
         "steps": [
           {
             "result": {
-              "duration": 34935546700,
+              "duration": 28300472100,
               "status": "passed"
             },
             "line": 3,
-            "name": "User selects  \"Electronics\" and \"Vivo\" and \"Y20\" as",
+            "name": "User selects  \"Electronics\" and \"Vivo\" and \"Y12\" as",
             "match": {
               "arguments": [
                 {
@@ -39,7 +39,7 @@
                   "offset": 32
                 },
                 {
-                  "val": "\"Y20\"",
+                  "val": "\"Y12\"",
                   "offset": 43
                 }
               ],
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 12414686300,
+              "duration": 8539680600,
               "status": "passed"
             },
             "line": 4,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 1586497600,
+              "duration": 803568700,
               "status": "passed"
             },
             "line": 5,
@@ -77,11 +77,11 @@
         "line": 9,
         "name": "User is on Home Page",
         "description": "",
-        "id": "select-product;user-is-on-home-page;;3",
+        "id": "all-products;user-is-on-home-page;;3",
         "after": [
           {
             "result": {
-              "duration": 682200,
+              "duration": 851600,
               "status": "passed"
             },
             "match": {
@@ -94,7 +94,7 @@
         "steps": [
           {
             "result": {
-              "duration": 29804095900,
+              "duration": 22480496500,
               "status": "passed"
             },
             "line": 3,
@@ -120,7 +120,7 @@
           },
           {
             "result": {
-              "duration": 10149119900,
+              "duration": 9097857100,
               "status": "passed"
             },
             "line": 4,
@@ -132,8 +132,80 @@
           },
           {
             "result": {
-              "duration": 1173362300,
+              "duration": 809011800,
               "status": "passed"
+            },
+            "line": 5,
+            "name": "user is taken to product Page",
+            "match": {
+              "location": "FlipkarAllProductSDF.user_is_taken_to_product_Page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User is on Home Page",
+        "description": "",
+        "id": "all-products;user-is-on-home-page;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 459000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FlipkartSDFHooks.afterEachScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24130253000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User selects  \"TVs \u0026 Appliances\" and \"Fully Automatic Front Load\" and \"Y20\" as",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"TVs \u0026 Appliances\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"Fully Automatic Front Load\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Y20\"",
+                  "offset": 70
+                }
+              ],
+              "location": "FlipkarAllProductSDF.user_selects_and_and_as(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkarAllProductSDF.click_on_user_Product(FlipkarAllProductSDF.java:45)\r\n\tat ✽.click on user Product(file:FeaturesFile/FlipkartAllProductFF.feature:4)\r\n",
+              "duration": 6254339500,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "click on user Product",
+            "match": {
+              "location": "FlipkarAllProductSDF.click_on_user_Product()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28500,
+              "status": "skipped"
             },
             "line": 5,
             "name": "user is taken to product Page",
@@ -145,9 +217,9 @@
         ]
       }
     ],
-    "name": "Select Product",
+    "name": "All Products",
     "description": "",
-    "id": "select-product",
+    "id": "all-products",
     "keyword": "Feature",
     "uri": "file:FeaturesFile/FlipkartAllProductFF.feature",
     "tags": []
@@ -163,7 +235,7 @@
         "after": [
           {
             "result": {
-              "duration": 677600,
+              "duration": 562200,
               "status": "passed"
             },
             "match": {
@@ -176,11 +248,11 @@
         "steps": [
           {
             "result": {
-              "duration": 39904311600,
+              "duration": 30412433800,
               "status": "passed"
             },
             "line": 3,
-            "name": "cart has Product\"Electronics\" and\"Vivo\" and \"Y20\"",
+            "name": "cart has Product\"Electronics\" and\"Vivo\" and \"Y12\"",
             "match": {
               "arguments": [
                 {
@@ -192,7 +264,7 @@
                   "offset": 33
                 },
                 {
-                  "val": "\"Y20\"",
+                  "val": "\"Y12\"",
                   "offset": 44
                 }
               ],
@@ -202,8 +274,9 @@
           },
           {
             "result": {
-              "duration": 3299587200,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: expected:\u003ctrue\u003e but was:\u003cfalse\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.qa.stepdefinition.FlipkartCartSDF.verify_item_count_and_Price(FlipkartCartSDF.java:59)\r\n\tat ✽.verify item count and Price(file:FeaturesFile/FlipkartCartFF.feature:4)\r\n",
+              "duration": 1509081800,
+              "status": "failed"
             },
             "line": 4,
             "name": "verify item count and Price",
@@ -222,7 +295,7 @@
         "after": [
           {
             "result": {
-              "duration": 859900,
+              "duration": 531400,
               "status": "passed"
             },
             "match": {
@@ -235,8 +308,9 @@
         "steps": [
           {
             "result": {
-              "duration": 41358682700,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkartCartSDF.cart_has_Product_and_and(FlipkartCartSDF.java:42)\r\n\tat ✽.cart has Product\"TVs \u0026 Appliances\" and\"Fully Automatic Front Load\" and \"IFB\"(file:FeaturesFile/FlipkartCartFF.feature:3)\r\n",
+              "duration": 21179741200,
+              "status": "failed"
             },
             "line": 3,
             "name": "cart has Product\"TVs \u0026 Appliances\" and\"Fully Automatic Front Load\" and \"IFB\"",
@@ -261,8 +335,8 @@
           },
           {
             "result": {
-              "duration": 3780887700,
-              "status": "passed"
+              "duration": 15300,
+              "status": "skipped"
             },
             "line": 4,
             "name": "verify item count and Price",
@@ -292,7 +366,7 @@
         "after": [
           {
             "result": {
-              "duration": 529400,
+              "duration": 1156200,
               "status": "passed"
             },
             "match": {
@@ -305,7 +379,7 @@
         "steps": [
           {
             "result": {
-              "duration": 14318929800,
+              "duration": 11520967500,
               "status": "passed"
             },
             "line": 3,
@@ -317,7 +391,7 @@
           },
           {
             "result": {
-              "duration": 17773752200,
+              "duration": 12233113300,
               "status": "passed"
             },
             "line": 4,
@@ -339,7 +413,7 @@
           },
           {
             "result": {
-              "duration": 2263198700,
+              "duration": 914622800,
               "status": "passed"
             },
             "line": 5,
@@ -359,7 +433,7 @@
         "after": [
           {
             "result": {
-              "duration": 391000,
+              "duration": 802300,
               "status": "passed"
             },
             "match": {
@@ -372,7 +446,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13747128100,
+              "duration": 10656782100,
               "status": "passed"
             },
             "line": 3,
@@ -384,7 +458,7 @@
           },
           {
             "result": {
-              "duration": 16087142300,
+              "duration": 11028534200,
               "status": "passed"
             },
             "line": 4,
@@ -406,8 +480,76 @@
           },
           {
             "result": {
-              "duration": 2710279000,
+              "duration": 861992700,
               "status": "passed"
+            },
+            "line": 5,
+            "name": "user is taken to Product Page",
+            "match": {
+              "location": "FlipkartHomeSDF.user_is_taken_to_Product_Page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User Navigate to His Choice of Menu",
+        "description": "",
+        "id": "user-navigate-to-menu;user-navigate-to-his-choice-of-menu;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 354100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FlipkartSDFHooks.afterEachScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10350887300,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User has login successfully",
+            "match": {
+              "location": "FlipkartHomeSDF.user_has_login_successfully()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkartHomeSDF.user_clicks_on_and(FlipkartHomeSDF.java:37)\r\n\tat ✽.User clicks on \"Electronics\" and \"Fully Automatic Front Load\"(file:FeaturesFile/FlipkartHomeFF.feature:4)\r\n",
+              "duration": 12177996900,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "User clicks on \"Electronics\" and \"Fully Automatic Front Load\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Electronics\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Fully Automatic Front Load\"",
+                  "offset": 33
+                }
+              ],
+              "location": "FlipkartHomeSDF.user_clicks_on_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34900,
+              "status": "skipped"
             },
             "line": 5,
             "name": "user is taken to Product Page",
@@ -437,7 +579,7 @@
         "after": [
           {
             "result": {
-              "duration": 442600,
+              "duration": 474100,
               "status": "passed"
             },
             "match": {
@@ -450,7 +592,7 @@
         "steps": [
           {
             "result": {
-              "duration": 14207103200,
+              "duration": 12654557500,
               "status": "passed"
             },
             "line": 3,
@@ -480,7 +622,7 @@
           },
           {
             "result": {
-              "duration": 393664600,
+              "duration": 232188100,
               "status": "passed"
             },
             "line": 4,
@@ -492,7 +634,7 @@
           },
           {
             "result": {
-              "duration": 6307403300,
+              "duration": 3910286200,
               "status": "passed"
             },
             "line": 5,
@@ -512,7 +654,7 @@
         "after": [
           {
             "result": {
-              "duration": 406400,
+              "duration": 897700,
               "status": "passed"
             },
             "match": {
@@ -525,7 +667,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13606494900,
+              "duration": 11225271600,
               "status": "passed"
             },
             "line": 3,
@@ -555,7 +697,7 @@
           },
           {
             "result": {
-              "duration": 425168000,
+              "duration": 712489000,
               "status": "passed"
             },
             "line": 4,
@@ -567,7 +709,7 @@
           },
           {
             "result": {
-              "duration": 1647491400,
+              "duration": 1259108300,
               "status": "passed"
             },
             "line": 5,
@@ -598,7 +740,7 @@
         "after": [
           {
             "result": {
-              "duration": 1187900,
+              "duration": 1361400,
               "status": "passed"
             },
             "match": {
@@ -611,11 +753,11 @@
         "steps": [
           {
             "result": {
-              "duration": 32683027100,
+              "duration": 31111265400,
               "status": "passed"
             },
             "line": 3,
-            "name": "User selects Product as \"Electronics\" and \"Vivo\" and \"Y20\"",
+            "name": "User selects Product as \"Electronics\" and \"Vivo\" and \"Y12\"",
             "match": {
               "arguments": [
                 {
@@ -627,7 +769,7 @@
                   "offset": 42
                 },
                 {
-                  "val": "\"Y20\"",
+                  "val": "\"Y12\"",
                   "offset": 53
                 }
               ],
@@ -637,7 +779,7 @@
           },
           {
             "result": {
-              "duration": 3785676600,
+              "duration": 3884965800,
               "status": "passed"
             },
             "line": 4,
@@ -649,7 +791,7 @@
           },
           {
             "result": {
-              "duration": 1346141800,
+              "duration": 845479800,
               "status": "passed"
             },
             "line": 5,
@@ -669,7 +811,7 @@
         "after": [
           {
             "result": {
-              "duration": 411400,
+              "duration": 489100,
               "status": "passed"
             },
             "match": {
@@ -682,8 +824,9 @@
         "steps": [
           {
             "result": {
-              "duration": 31016047900,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkartProductSDF.user_selects_Product_as_and_and(FlipkartProductSDF.java:39)\r\n\tat ✽.User selects Product as \"TVs \u0026 Appliances\" and \"Fully Automatic Front Load\" and \"IFB\"(file:FeaturesFile/FlipkartProductFF.feature:3)\r\n",
+              "duration": 23491652700,
+              "status": "failed"
             },
             "line": 3,
             "name": "User selects Product as \"TVs \u0026 Appliances\" and \"Fully Automatic Front Load\" and \"IFB\"",
@@ -708,8 +851,8 @@
           },
           {
             "result": {
-              "duration": 4063114800,
-              "status": "passed"
+              "duration": 9800,
+              "status": "skipped"
             },
             "line": 4,
             "name": "clicks on Add to Cart",
@@ -720,8 +863,8 @@
           },
           {
             "result": {
-              "duration": 1265311600,
-              "status": "passed"
+              "duration": 6000,
+              "status": "skipped"
             },
             "line": 5,
             "name": "product is added to cart",

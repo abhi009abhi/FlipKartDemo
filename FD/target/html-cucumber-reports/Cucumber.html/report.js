@@ -1,6 +1,6 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:FeaturesFile/FlipkartAllProductFF.feature");
 formatter.feature({
-  "name": "Select Product",
+  "name": "All Products",
   "description": "",
   "keyword": "Feature"
 });
@@ -37,7 +37,7 @@ formatter.examples({
       "cells": [
         "Electronics",
         "Vivo",
-        "Y20"
+        "Y12"
       ]
     },
     {
@@ -45,6 +45,13 @@ formatter.examples({
         "TVs \u0026 Appliances",
         "Fully Automatic Front Load",
         "IFB"
+      ]
+    },
+    {
+      "cells": [
+        "TVs \u0026 Appliances",
+        "Fully Automatic Front Load",
+        "Y20"
       ]
     }
   ]
@@ -55,7 +62,7 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "User selects  \"Electronics\" and \"Vivo\" and \"Y20\" as",
+  "name": "User selects  \"Electronics\" and \"Vivo\" and \"Y12\" as",
   "keyword": "Given "
 });
 formatter.match({
@@ -125,6 +132,45 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "User is on Home Page",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "User selects  \"TVs \u0026 Appliances\" and \"Fully Automatic Front Load\" and \"Y20\" as",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "FlipkarAllProductSDF.user_selects_and_and_as(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on user Product",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "FlipkarAllProductSDF.click_on_user_Product()"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkarAllProductSDF.click_on_user_Product(FlipkarAllProductSDF.java:45)\r\n\tat ✽.click on user Product(file:FeaturesFile/FlipkartAllProductFF.feature:4)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user is taken to product Page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "FlipkarAllProductSDF.user_is_taken_to_product_Page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "status": "passed"
+});
 formatter.uri("file:FeaturesFile/FlipkartCartFF.feature");
 formatter.feature({
   "name": "Cart Items",
@@ -160,7 +206,7 @@ formatter.examples({
       "cells": [
         "Electronics",
         "Vivo",
-        "Y20"
+        "Y12"
       ]
     },
     {
@@ -178,7 +224,7 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "cart has Product\"Electronics\" and\"Vivo\" and \"Y20\"",
+  "name": "cart has Product\"Electronics\" and\"Vivo\" and \"Y12\"",
   "keyword": "Given "
 });
 formatter.match({
@@ -195,7 +241,8 @@ formatter.match({
   "location": "FlipkartCartSDF.verify_item_count_and_Price()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: expected:\u003ctrue\u003e but was:\u003cfalse\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.qa.stepdefinition.FlipkartCartSDF.verify_item_count_and_Price(FlipkartCartSDF.java:59)\r\n\tat ✽.verify item count and Price(file:FeaturesFile/FlipkartCartFF.feature:4)\r\n",
+  "status": "failed"
 });
 formatter.after({
   "status": "passed"
@@ -213,7 +260,8 @@ formatter.match({
   "location": "FlipkartCartSDF.cart_has_Product_and_and(String,String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkartCartSDF.cart_has_Product_and_and(FlipkartCartSDF.java:42)\r\n\tat ✽.cart has Product\"TVs \u0026 Appliances\" and\"Fully Automatic Front Load\" and \"IFB\"(file:FeaturesFile/FlipkartCartFF.feature:3)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "verify item count and Price",
@@ -223,7 +271,7 @@ formatter.match({
   "location": "FlipkartCartSDF.verify_item_count_and_Price()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -271,6 +319,12 @@ formatter.examples({
     {
       "cells": [
         "TVs \u0026 Appliances",
+        "Fully Automatic Front Load"
+      ]
+    },
+    {
+      "cells": [
+        "Electronics",
         "Fully Automatic Front Load"
       ]
     }
@@ -348,6 +402,45 @@ formatter.match({
 });
 formatter.result({
   "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "User Navigate to His Choice of Menu",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "User has login successfully",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "FlipkartHomeSDF.user_has_login_successfully()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on \"Electronics\" and \"Fully Automatic Front Load\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "FlipkartHomeSDF.user_clicks_on_and(String,String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkartHomeSDF.user_clicks_on_and(FlipkartHomeSDF.java:37)\r\n\tat ✽.User clicks on \"Electronics\" and \"Fully Automatic Front Load\"(file:FeaturesFile/FlipkartHomeFF.feature:4)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user is taken to Product Page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "FlipkartHomeSDF.user_is_taken_to_Product_Page()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -521,7 +614,7 @@ formatter.examples({
       "cells": [
         "Electronics",
         "Vivo",
-        "Y20"
+        "Y12"
       ]
     },
     {
@@ -539,7 +632,7 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "User selects Product as \"Electronics\" and \"Vivo\" and \"Y20\"",
+  "name": "User selects Product as \"Electronics\" and \"Vivo\" and \"Y12\"",
   "keyword": "Given "
 });
 formatter.match({
@@ -584,7 +677,8 @@ formatter.match({
   "location": "FlipkartProductSDF.user_selects_Product_as_and_and(String,String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.qa.stepdefinition.FlipkartProductSDF.user_selects_Product_as_and_and(FlipkartProductSDF.java:39)\r\n\tat ✽.User selects Product as \"TVs \u0026 Appliances\" and \"Fully Automatic Front Load\" and \"IFB\"(file:FeaturesFile/FlipkartProductFF.feature:3)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "clicks on Add to Cart",
@@ -594,7 +688,7 @@ formatter.match({
   "location": "FlipkartProductSDF.clicks_on_Add_to_Cart()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "product is added to cart",
@@ -604,7 +698,7 @@ formatter.match({
   "location": "FlipkartProductSDF.product_is_added_to_cart()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"

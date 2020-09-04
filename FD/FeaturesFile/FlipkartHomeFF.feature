@@ -7,4 +7,5 @@ Examples:
 |category|subCategory|
 |Electronics|Vivo|
 |TVs & Appliances|Fully Automatic Front Load|
+|Electronics|Fully Automatic Front Load|
 
